@@ -604,5 +604,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Apple-style loading state
     document.body.classList.add('loaded');
 
-    console.log('🍎 Apple-style Portfolio initialized successfully!');
+    // Knowledge Cards Expansion Functionality
+    const knowledgeCards = document.querySelectorAll('.knowledge-card');
+    knowledgeCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Close other expanded cards
+            knowledgeCards.forEach(otherCard => {
+                if (otherCard !== this) {
+                    otherCard.classList.remove('expanded');
+                }
+            });
+
+            // Toggle current card
+            this.classList.toggle('expanded');
+        });
+    });
+
+    // Company Carousel Rotation
+    function rotateCarousel() {
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentActive = 0;
+
+        setInterval(() => {
+            // Remove active class from current item
+            carouselItems[currentActive].classList.remove('active');
+
+            // Move to next item
+            currentActive = (currentActive + 1) % carouselItems.length;
+
+            // Add active class to new item
+            carouselItems[currentActive].classList.add('active');
+        }, 2000);
+    }
+
+    // Initialize carousel rotation
+    rotateCarousel();
+
+    // Enhanced scroll effects for knowledge cards
+    const knowledgeCardsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                }, index * 200);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe knowledge cards
+    const knowledgeCardsToObserve = document.querySelectorAll('.knowledge-card');
+    knowledgeCardsToObserve.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(60px)';
+        knowledgeCardsObserver.observe(card);
+    });
+
+    console.log('🍎 Apple-style Portfolio with Knowledge Section initialized successfully!');
 });
