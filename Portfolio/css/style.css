@@ -148,17 +148,11 @@ body {
     margin: 0 auto;
     padding: 0 22px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 44px;
 }
 
-.nav-logo {
-    font-weight: var(--font-weight-semibold);
-    font-size: 17px;
-    color: var(--apple-black);
-    text-decoration: none;
-}
 
 .nav-menu {
     display: flex;
@@ -220,8 +214,89 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
-    text-align: center;
+    text-align: left;
     z-index: 2;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-name {
+    font-size: clamp(64px, 12vw, 120px);
+    line-height: 0.9;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.025em;
+    color: var(--apple-black);
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-tagline {
+    font-size: clamp(21px, 3vw, 28px);
+    line-height: 1.2;
+    font-weight: var(--font-weight-regular);
+    color: var(--apple-gray-dark);
+    letter-spacing: -0.01em;
+}
+
+/* Company Logos Section - Apple iPhone Style */
+.companies-section {
+    padding: var(--spacing-xxl) 0;
+    background: var(--apple-white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.companies-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity var(--transition-normal);
+    flex: 1;
+    min-width: 120px;
+}
+
+.company-logo:hover {
+    opacity: 1;
+}
+
+.company-logo img {
+    height: 40px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter var(--transition-normal);
+}
+
+.company-logo:hover img {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .companies-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .company-logo {
+        min-width: auto;
+    }
+
+    .company-logo img {
+        height: 32px;
+    }
 }
 
 .hero-eyebrow {
