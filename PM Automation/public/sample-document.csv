@@ -1,0 +1,16 @@
+Feature ID,Feature Name,Description,Priority,Status,Assigned To,Due Date
+FR-001,User Authentication,Implement secure login/logout functionality with password recovery,High,In Progress,John Smith,2023-06-15
+FR-002,Dashboard,Create personalized dashboard with key metrics and visualizations,Medium,Planned,Sarah Johnson,2023-07-01
+FR-003,File Upload,Allow users to upload and manage documents in various formats,High,Planned,Michael Brown,2023-06-20
+FR-004,Search Functionality,Implement advanced search with filters and sorting options,Medium,Not Started,Emily Davis,2023-07-15
+FR-005,Notifications,Create in-app and email notification system,Low,Not Started,David Wilson,2023-08-01
+FR-006,User Management,Admin functionality to manage users and permissions,High,In Progress,Lisa Anderson,2023-06-30
+FR-007,Reporting,Generate customizable reports with export options,Medium,Planned,Robert Martinez,2023-07-10
+FR-008,Mobile Responsiveness,Ensure application works well on various devices and screen sizes,High,Not Started,Jennifer Taylor,2023-06-25
+FR-009,Data Visualization,Create interactive charts and graphs for data analysis,Medium,Planned,William Thompson,2023-07-20
+FR-010,API Integration,Connect with third-party services via API,Low,Not Started,Sophia Lee,2023-08-10
+FR-011,Payment Processing,Implement secure payment gateway integration,High,Not Started,Daniel White,2023-07-05
+FR-012,Multilingual Support,Add support for multiple languages,Low,Planned,Olivia Harris,2023-08-15
+FR-013,Theme Customization,Allow users to customize application appearance,Low,Not Started,James Clark,2023-08-20
+FR-014,Document Generation,Create functionality to generate PDF documents,Medium,Planned,Emma Lewis,2023-07-25
+FR-015,Activity Logging,Track and display user activities and system events,Medium,Not Started,Alexander Walker,2023-07-30 

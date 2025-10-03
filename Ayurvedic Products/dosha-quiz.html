@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosha Quiz - Ayurveda Beauty</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Ayurveda Beauty</h1>
+                <p>Harmony in Every Drop</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="dosha-quiz.html" class="active">Dosha Quiz</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-title">
+        <div class="container">
+            <h1>Discover Your Dosha</h1>
+            <p>Find your unique mind-body constitution and recommended products</p>
+        </div>
+    </section>
+
+    <section class="dosha-intro">
+        <div class="container">
+            <div class="dosha-cards">
+                <div class="dosha-card">
+                    <div class="dosha-icon vata-icon">
+                        <img src="images/vata-icon.svg" alt="Vata">
+                    </div>
+                    <h3>Vata</h3>
+                    <p>Air & Ether</p>
+                    <ul>
+                        <li>Dry, thin skin</li>
+                        <li>Fine pores</li>
+                        <li>Prone to dryness</li>
+                        <li>Early aging</li>
+                    </ul>
+                </div>
+                <div class="dosha-card">
+                    <div class="dosha-icon pitta-icon">
+                        <img src="images/pitta-icon.svg" alt="Pitta">
+                    </div>
+                    <h3>Pitta</h3>
+                    <p>Fire & Water</p>
+                    <ul>
+                        <li>Sensitive skin</li>
+                        <li>Medium pores</li>
+                        <li>Prone to redness</li>
+                        <li>Inflammatory concerns</li>
+                    </ul>
+                </div>
+                <div class="dosha-card">
+                    <div class="dosha-icon kapha-icon">
+                        <img src="images/kapha-icon.svg" alt="Kapha">
+                    </div>
+                    <h3>Kapha</h3>
+                    <p>Earth & Water</p>
+                    <ul>
+                        <li>Thick, oily skin</li>
+                        <li>Large pores</li>
+                        <li>Prone to congestion</li>
+                        <li>Resilient skin</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="dosha-intro-text">In Ayurveda, your unique combination of these three doshas determines your prakriti (constitution). While we all contain all three doshas, most people have one or two that are predominant. Take our quiz to discover your dominant dosha and receive personalized skincare recommendations.</p>
+        </div>
+    </section>
+
+    <section class="quiz-section">
+        <div class="container">
+            <div class="quiz-container">
+                <form id="dosha-quiz">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <p><span id="current-question">1</span> of <span id="total-questions">15</span></p>
+                    </div>
+                    
+                    <div class="quiz-questions">
+                        <!-- Question 1 - Physical Build -->
+                        <div class="question-slide active" data-question="1">
+                            <h3>1. My frame and overall build is:</h3>
+                            <div class="answers">
+                                <label class="answer-option">
+                                    <input type="radio" name="q1" value="vata">
+                                    <span class="radio-custom"></span>
+                                    <span>Thin, I struggle to gain weight</span>
+                                </label>
+                                <label class="answer-option">
+                                    <input type="radio" name="q1" value="pitta">
+                                    <span class="radio-custom"></span>
+                                    <span>Medium, athletic build</span>
+                                </label>
+                                <label class="answer-option">
+                                    <input type="radio" name="q1" value="kapha">
+                                    <span class="radio-custom"></span>
+                                    <span>Solid, tend to gain weight easily</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Question 2 - Skin Type -->
+                        <div class="question-slide" data-question="2">
+                            <h3>2. My skin tends to be:</h3>
+                            <div class="answers">
+                                <label class="answer-option">
+                                    <input type="radio" name="q2" value="vata">
+                                    <span class="radio-custom"></span>
+                                    <span>Dry, rough, or thin</span>
+                                </label>
+                                <label class="answer-option">
+                                    <input type="radio" name="q2" value="pitta">
+                                    <span class="radio-custom"></span>
+                                    <span>Warm, reddish, sensitive</span>
+                                </label>
+                                <label class="answer-option">
+                                    <input type="radio" name="q2" value="kapha">
+                                    <span class="radio-custom"></span>
+                                    <span>Oily, thick, smooth</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Question 3 - Weather Preference -->
+                        <div class="question-slide" data-question="3">
+                            <h3>3. I prefer or feel best in:</h3>
+                            <div class="answers">
+                                <label class="answer-option">
+                                    <input type="radio" name="q3" value="vata">
+                                    <span class="radio-custom"></span>
+                                    <span>Warm, humid weather</span>
+                                </label>
+                                <label class="answer-option">
+                                    <input type="radio" name="q3" value="pitta">
+                                    <span class="radio-custom"></span>
+                                    <span>Cool, dry weather</span>
+                                </label>
+                                <label class="answer-option">
+                                    <input type="radio" name="q3" value="kapha">
+                                    <span class="radio-custom"></span>
+                                    <span>Warm, dry weather</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- More questions would follow... -->
+                        
+                        <!-- Results slide -->
+                        <div class="question-slide results-slide" data-question="results">
+                            <h3>Your Dosha Results</h3>
+                            <div class="dosha-results">
+                                <div class="dosha-result-meter">
+                                    <div class="dosha-meter">
+                                        <div class="dosha-label">Vata</div>
+                                        <div class="meter-bar">
+                                            <div class="meter-fill vata-fill" style="width:0%"></div>
+                                        </div>
+                                        <div class="meter-percent">0%</div>
+                                    </div>
+                                    <div class="dosha-meter">
+                                        <div class="dosha-label">Pitta</div>
+                                        <div class="meter-bar">
+                                            <div class="meter-fill pitta-fill" style="width:0%"></div>
+                                        </div>
+                                        <div class="meter-percent">0%</div>
+                                    </div>
+                                    <div class="dosha-meter">
+                                        <div class="dosha-label">Kapha</div>
+                                        <div class="meter-bar">
+                                            <div class="meter-fill kapha-fill" style="width:0%"></div>
+                                        </div>
+                                        <div class="meter-percent">0%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="primary-dosha">
+                                    <h4>Your primary dosha is: <span id="primary-dosha-result">-</span></h4>
+                                    <p id="dosha-description"></p>
+                                </div>
+                                
+                                <div class="recommended-products">
+                                    <h4>Recommended Products</h4>
+                                    <div class="product-recommendations">
+                                        <!-- Products will be inserted here via JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="quiz-actions">
+                                    <a href="products.html" class="btn">Shop Recommended Products</a>
+                                    <button type="button" class="btn-outline" id="retake-quiz">Retake Quiz</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button type="button" class="btn-outline prev-btn" disabled>Previous</button>
+                        <button type="button" class="btn next-btn">Next</button>
+                        <button type="button" class="btn submit-btn" style="display:none;">See Results</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h3>Ayurveda Beauty</h3>
+                        <p>Harmony in Every Drop</p>
+                    </div>
+                    <p>Ancient wisdom for modern skincare. Our products harness the power of Ayurvedic herbs to bring balance and beauty.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="dosha-quiz.html">Dosha Quiz</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p>Subscribe to our newsletter</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit" class="btn-small">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ayurveda Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html> 
